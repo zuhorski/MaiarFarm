@@ -16,7 +16,7 @@ st.title("Maiar Farm Calculator")
 #             print(login)
 #             login.to_csv("Usernames.csv", header=True)
 
-mexPrice = st.number_input("Price of Mex")
+mexPrice = st.number_input("Price of Mex", value=0.0003)
 st.write("Price you entered:", mexPrice)
 
 col1, col2 = st.columns(2)
@@ -61,7 +61,7 @@ with col2:
     hoursten = ((mexten/oneMin) / 60).__round__(2)
     st.write(f"hours/$10 = {hoursten}")
 
-    st.write("Time for 100% ROI:")
+    st.write("TIME FOR 100% ROI:")
     rewards = st.number_input("Rewards earned in $", value=1)
 
     days = ((3150.16 - rewards) / (mexPrice*day))
@@ -72,3 +72,13 @@ with col2:
 
     secondhundred = first100 + timedelta(days = (3150.16 / (mexPrice*day)))
     st.write("Expected Date of 200% ROI:", secondhundred)
+
+    st.write("TIME UNTIL YOUR NEXT $10 (EGLD-MEX Farm):")
+    mexearned = st.number_input("Mex Earned")
+
+    mexCalc = mexten - mexearned
+    minutes = mexCalc / oneMin
+    st.write("Minutes =", minutes)
+
+    hours = mexCalc / hour
+    st.write("Hours =", hours)
