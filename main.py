@@ -1,6 +1,6 @@
 import streamlit as st
 from datetime import date, timedelta, datetime
-
+import pytz
 
 st.title("Maiar Farm Calculator")
 
@@ -85,4 +85,5 @@ with col2:
     hours = mexCalc / hour
     st.write("Hours =", hours)
 
-    st.write(datetime.now() + timedelta(minutes=minutes))
+    tz = pytz.timezone('US/Michigan')
+    st.write(datetime.now(tz)+ timedelta(minutes=minutes) )
