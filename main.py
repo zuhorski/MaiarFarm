@@ -55,6 +55,7 @@ with col1:
     st.write(f"{year} Mex/Year =", "$", (mexPrice * year).__round__(2))
 
 with col2:
+    st.write("TIME IT TAKES FOR:")
     mexten = ((10/mexPrice).__round__(2))
     st.write(f"Mex/$10 = {mexten}")
 
