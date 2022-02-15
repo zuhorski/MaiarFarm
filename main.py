@@ -86,4 +86,4 @@ with col2:
     st.write("Hours =", hours)
 
     tz = pytz.timezone('US/Michigan')
-    st.write(datetime.now(tz)+ timedelta(minutes=minutes) )
+    st.write(datetime.now(tz)+ timedelta(minutes=minutes))
