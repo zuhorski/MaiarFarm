@@ -1,5 +1,6 @@
 import streamlit as st
-from datetime import date, timedelta
+from datetime import date, timedelta, datetime
+
 
 st.title("Maiar Farm Calculator")
 
@@ -83,3 +84,5 @@ with col2:
 
     hours = mexCalc / hour
     st.write("Hours =", hours)
+
+    st.write(datetime.now() + timedelta(minutes=minutes))
