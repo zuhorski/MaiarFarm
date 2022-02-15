@@ -62,7 +62,7 @@ with col2:
     st.write(f"hours/$10 = {hoursten}")
 
     st.write("Time for 100% ROI:")
-    rewards = st.number_input("Rewards earned in $", value=0)
+    rewards = st.number_input("Rewards earned in $", value=1)
 
     days = ((3150.16 - rewards) / (mexPrice*day))
     st.write(f"Days until 100% ROI: {days}")
