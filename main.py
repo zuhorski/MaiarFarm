@@ -4,25 +4,12 @@ import pytz
 
 st.title("Maiar Farm Calculator")
 
-# userDF = pd.DataFrame({"Username":[0]})
-# username = st.text_input("Create a username").lower()
-#
-# if submitbutton := st.button("Submit"):
-#     login = pd.read_csv(r"C:\Users\sabzu\Documents\MaiarFarming\Usernames.csv")
-#     for i in login["Username"]:
-#         if i == username:
-#             st.write("Member!")
-#         else:
-#             print(login["Username"].convert_dtypes())
-#             print(login)
-#             login.to_csv("Usernames.csv", header=True)
-
 mexPrice = st.number_input("Price of Mex", value=0.0003)
 st.write("Price you entered:", mexPrice)
 
 col1, col2 = st.columns(2)
 with col1:
-    oneMin = 36.56
+    oneMin = 19
     st.write(f"{oneMin} Mex/minute =", "$", (mexPrice * oneMin).__round__(2))
 
     halfhour = (oneMin*30).__round__(2)
